@@ -1,0 +1,21 @@
+.App {
+    text-align: center;
+    color: white;
+}
+
+img {
+    display: block;
+    width: 50vh;
+    box-shadow: black 30px 20px;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    margin: 5vh auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
