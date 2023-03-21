@@ -1,14 +1,26 @@
 import "./TagHolder.css";
 import Button from "./UI/Button";
 
-const TagHolder = () => {
+const TagHolder = ({lifeSpan, weight, origin, onBanLife, onBanWeight, onBanOrigin}) => {
+
+  const lifeHandler = () => {
+    onBanLife();
+  }
+
+  const weightHandler = () => {
+    onBanWeight();
+  }
+
+  const originHandler = () => {
+    onBanOrigin();
+  }
+
   return (
     <div className="tag-holder-container">
       <div className="tag-holder">
-        <Button type={50}>Grey</Button>
-        <Button type={50}>Height: 2' 3"</Button>
-        <Button type={50}>Weight: 75lbs</Button>
-        <Button type={50}>Breed</Button>
+        <Button onClick={lifeHandler} type={50}>{lifeSpan} years</Button>
+        <Button onClick={weightHandler} type={50}>Weight: {weight}lbs</Button>
+        <Button onClick={originHandler} type={50}>Origin: {origin}</Button>
       </div>
     </div>
   );
